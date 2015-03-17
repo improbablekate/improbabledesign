@@ -1,0 +1,14 @@
+.site-header {
+    height: 5em;
+    background-color: $primary-color;
+    border-bottom: .5em solid $border-color;
+    padding: 1em 0;
+    
+    .site-branding {
+        float: left;
+     
+        img {
+            width: 5em;
+        }
+    }
+}

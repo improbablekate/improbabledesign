@@ -220,6 +220,13 @@ td,
 th {
   padding: 0; }
 
+.row {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  content: "";
+  display: table; }
+
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
@@ -339,7 +346,8 @@ table {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.button {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
@@ -350,11 +358,13 @@ input[type="submit"] {
   font-size: 0.75rem;
   line-height: 1;
   padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  text-decoration: none; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
-  input[type="submit"]:hover {
+  input[type="submit"]:hover,
+  .button:hover {
     border-color: #ccc #bbb #aaa;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
   button:active, button:focus,
@@ -363,7 +373,9 @@ input[type="submit"] {
   input[type="reset"]:active,
   input[type="reset"]:focus,
   input[type="submit"]:active,
-  input[type="submit"]:focus {
+  input[type="submit"]:focus,
+  .button:active,
+  .button:focus {
     border-color: #aaa #bbb #bbb;
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
@@ -416,10 +428,7 @@ a {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
+  float: right; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -445,7 +454,9 @@ a {
     position: relative; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 1em; }
 
 /* Small menu. */
 .menu-toggle {
@@ -683,5 +694,62 @@ object {
 
 .gallery-caption {
   display: block; }
+
+/*--------------------------------------------------------------
+13.0 Custom
+--------------------------------------------------------------*/
+.site-header {
+  height: 5em;
+  background-color: #070707;
+  border-bottom: 0.5em solid #999999;
+  padding: 1em 0; }
+  .site-header .site-branding {
+    float: left; }
+    .site-header .site-branding img {
+      width: 5em; }
+
+.hero {
+  text-align: center;
+  height: 24em;
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important; }
+  html.touch .hero {
+    background-attachment: scroll !important; }
+  .hero .content-wrap {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    .hero .content-wrap h1, .hero .content-wrap h3 {
+      color: #070707; }
+    .hero .content-wrap h1 {
+      margin-bottom: 0; }
+    .hero .content-wrap h3 {
+      margin-top: 0; }
+
+.drivers {
+  background: #999999;
+  padding: 2em; }
+
+.driver-column {
+  float: left;
+  width: 33%;
+  padding: 0 1em;
+  text-align: center; }
+  .driver-column h2 {
+    position: relative;
+    padding-bottom: 1em; }
+    .driver-column h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 5px;
+      background-color: cyan;
+      border-radius: 5px;
+      left: 30%;
+      right: 30%; }
 
 /*# sourceMappingURL=style.css.map */

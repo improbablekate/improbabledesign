@@ -21,3 +21,22 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+// Background Images
+@mixin background-image($attachment: fixed) {
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: $attachment !important;
+
+  // Attachment scroll on mobile and unsupported browsers
+  html.touch & { background-attachment: scroll !important; }
+}
+
+// Vertical Alignment
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+

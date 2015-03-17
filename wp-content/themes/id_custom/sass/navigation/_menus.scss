@@ -1,8 +1,5 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+    float: right;
 
 	ul {
 		list-style: none;
@@ -53,6 +50,8 @@
 	a {
 		display: block;
 		text-decoration: none;
+        color: $background-color;
+        margin-left: 1em;
 	}
 
 	.current_page_item > a,

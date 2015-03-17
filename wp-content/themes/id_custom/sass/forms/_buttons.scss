@@ -1,7 +1,8 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.button {
 	border: 1px solid;
 	border-color: $color__border-button;
 	border-radius: 3px;
@@ -12,6 +13,7 @@ input[type="submit"] {
 	line-height: 1;
 	padding: .6em 1em .4em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    text-decoration: none;
 
 	&:hover {
 		border-color: $color__border-button-hover;
